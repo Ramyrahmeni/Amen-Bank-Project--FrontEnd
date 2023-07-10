@@ -1,0 +1,515 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$primaryColor: #00813a;
+$secondaryColor: #000295;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(238, 238, 238);
+  padding: 0px;
+  margin: 0px;
+  width:100%;
+  height: 100%;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+//Header
+.slogan {
+  color: #008738;
+  text-align: center;
+  font-weight: 700;
+  font-size: 33px;
+  margin-bottom: 35px;
+}
+
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.amenbankLogo{
+  width: 480px;
+}
+
+
+//form section
+.form-section{
+  margin-top: 200px;
+}
+form{
+  margin-bottom: 100px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 800px;
+  height: 600px; 
+  padding: 20px;
+  border-radius: 5px;
+  float: left;
+  background-color: rgb(33, 33, 33);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;  .input{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    input[type='text'],
+    input[type='password'] {
+      width: 80%;
+      height: 20px;
+      padding: 10px;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+  }
+  h2{
+    font-weight:700;
+  }
+  h3{
+    margin-bottom: 20px;
+  }
+  .submit{
+    display: flex;
+    justify-content: center;
+    input[type='submit'] {
+      background-color: $primaryColor;
+      color: #fff;
+      width:600px;
+      height: 60px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    
+      &:hover {
+        background-color: $secondaryColor;
+      }
+    }
+
+  }
+  .note{
+    background-color: #ecff95;
+    margin-top: 40px;
+    padding: 10px;
+    font-weight: 700;
+    color: #718516;
+    border-radius: 4px;
+    span{
+      color:#00813a;
+      &:hover{
+          cursor: pointer;
+          text-decoration: underline;
+      }
+    }
+  }
+  
+
+
+}
+.img-form {
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: block;
+    width: 600px;
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  .overlay {
+    border-radius: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as desired */
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+//contact
+.fl-fl {
+  background: #03943F;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px;
+  width: 150px;
+  position: fixed;
+  left: -110px;
+  z-index: 1000;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all .25s ease;
+}
+@font-face {
+	font-family: 'icomoon';
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
+		url('fhttps://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.social-networks {
+  margin-top: 50px;
+  margin: 35px;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 68px;
+    height: 68px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      background-color: #1f2027;
+      transition: all 400ms;
+    }
+
+    &:after {
+      position: relative;
+      display: block;
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #fff;
+      font-size: 26px;
+      line-height: 66px;
+    }
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  &.spin-icon a:hover:after, &.spin-icon a:focus:after {
+    transition: transform 0.4s ease-out;
+    transform: rotateZ(360deg);
+  }
+  
+  &.square a:hover:before, &.square a:focus:before {
+    border-radius: 0;
+  }
+  
+  &.bounce a:hover, &.bounce a:focus {
+    animation: bounce 1s;
+  }
+  
+  $networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #00b0ed, instagram '\e604' #3f729b, youtube '\e619' #FF0000
+  ;
+  
+  @each $network in $networks {
+     .icon-#{nth($network, 1)} {
+       &:after {
+         content: '#{nth($network, 2)}';
+      }
+
+      &:hover:before, &:focus:before {
+        background: nth($network, 3);
+      }
+    }
+  }
+}
+footer{
+  width:100%;
+  height:500px;
+  .footer-container{
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #1f2027;
+      width:100%;
+      height: 100%;
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: space-around;
+      align-items:flex-start;
+      .actualites{
+        width:300px;
+        p{
+          margin: 0px;
+        }
+        color: white;
+        font-size: 20px;
+      }
+      .informations{
+        color:white;
+        font-size: 20px;
+        ul{
+          margin: 0px;
+          li{
+            margin-bottom: 15px;
+          }
+        }
+        a {
+          margin: 0px;
+          padding:0px;
+          background-image: linear-gradient(
+            to right,
+            $primaryColor,
+            $primaryColor 50%,
+            #ffffff 50%
+          );
+          background-size: 200% 100%;
+          background-position: -100%;
+          display: inline-block;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:before{
+          content: '';
+          background: $primaryColor;
+          display: block;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 3px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover {
+         background-position: 0;
+         cursor: pointer;
+
+        }
+        
+        a:hover::before{
+          width: 100%;
+        }
+        img{
+          width: 200px;
+        }
+        
+      }
+      .contact{
+          color: white;
+          font-size: 20px;
+          ul{
+            margin: 0px;
+            li{
+            margin-bottom: 15px;
+            }
+          }
+      }
+      .footer-sub-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 40px;
+      }
+
+  }
+}
+// Media queries for smaller screens
+@media only screen and (max-width: 768px) {
+  .header-container {
+    .amenbankLogo{
+      width: 200px;
+    }
+    .slogan {
+      font-size: 20px;
+    }
+  }
+
+  .slogan-container {
+    margin-top: 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 20px;
+  }
+
+  .amenbankLogo {
+    max-width: 150px;
+  }
+
+  .form-section {
+    margin-top: 100px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    max-width: 500px;
+    h2{
+      margin-bottom: 20px;
+    }
+    .input{
+      display: flex;
+      flex-direction: column;
+      row-gap: 0px;
+    }
+    .submit{
+      margin-top: 40px;
+    }
+  }
+
+  .img-form {
+    margin-top: 20px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  footer{
+    height: auto;
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+    .informations,.contact{
+      margin-left: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body{
+    overflow-x: hidden;
+    margin: 0;
+
+  }
+  .header-container {
+    width: 100%;
+    align-items: top;
+    column-gap: 0px;
+    justify-content: space-around;
+    .amenbankLogo{
+      width: 80px;
+    }
+    .slogan {
+      font-size: 15px;
+      margin-top: 35px;
+    }
+    .logoamennet{
+      width: 70px;
+      margin-top: 5px;
+    }
+  }
+  .social-networks{
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    margin-top: 100px;
+    max-width: 300px;
+    height: 900px;
+    h2{
+      margin-top:-10px;
+      margin-bottom: 20px;
+    }
+    .input{
+      display: flex;
+      flex-direction: column;
+      row-gap: 0px;
+    }
+    .submit{
+      margin-top: 70px;
+    }
+  }
+
+  .submit input[type='submit'] {
+    width: 100%;
+  }
+
+  .footer-container {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  .img-form{
+    display: none;
+  }
+  footer{
+    height: auto;
+    margin: 0;
+    .actualites{
+      width:100px;
+      margin-right: px;
+    }
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+    }
+    .informations,.contact{
+      margin-left: 27px;
+    }
+  }
+}
+
