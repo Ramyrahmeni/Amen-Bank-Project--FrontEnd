@@ -96,11 +96,18 @@ form {
   padding: 10px 20px;
   border-radius: 3px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   font-size: 20px;
 }
 .form-container .submit input[type=submit]:hover {
-  background-color: #000295;
+  background-color: #1f2027;
+  border: #ffffff solid 2px;
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+}
+.form-container .submit input[type=submit]:focus {
+  border: #ffffff solid 2px; /* Apply the border when button is focused */
+  outline: none; /* Remove the default outline */
 }
 .form-container .note {
   background-color: #ecff95;
