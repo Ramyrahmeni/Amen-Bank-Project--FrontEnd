@@ -444,6 +444,13 @@ footer .footer-container .footer-sub-container {
   justify-content: flex-start;
   row-gap: 40px;
 }
+footer .cp {
+  background-color: #1f2027;
+  margin: 0px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
 
 @media only screen and (max-width: 1500px) {
   .header-container .amenbankLogo {
@@ -493,6 +500,9 @@ footer .footer-container .footer-sub-container {
   }
 }
 @media only screen and (max-width: 1140px) {
+  .help {
+    padding: 10px;
+  }
   .container {
     display: flex;
   }
@@ -515,6 +525,11 @@ footer .footer-container .footer-sub-container {
   }
 }
 @media only screen and (max-width: 768px) {
+  .help {
+    font-size: 20px;
+    margin: 150px;
+    max-width: 400px;
+  }
   .header-container .amenbankLogo {
     width: 200px;
   }
@@ -645,4 +660,17 @@ footer .footer-container .footer-sub-container {
     margin-right: 10px;
     margin-bottom: 15px;
   }
+}
+.help {
+  background-color: #1f2027;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 25px;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 7px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=form-styling.css.map */
