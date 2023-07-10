@@ -150,7 +150,7 @@ form {
   margin-top: 2px;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  background: black;
   border-radius: 1.625rem;
 }
 .form-container .note button.learn-more .circle .icon {
@@ -159,11 +159,11 @@ form {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  background: black;
 }
 .form-container .note button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
+  left: 0.7rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
@@ -175,8 +175,8 @@ form {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid white;
+  border-right: 0.125rem solid white;
   transform: rotate(45deg);
 }
 .form-container .note button.learn-more .button-text {
@@ -188,7 +188,7 @@ form {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 1.85rem;
-  color: #282936;
+  color: black;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.6;
@@ -199,11 +199,11 @@ form {
   width: 100%;
 }
 .form-container .note button:hover .circle .icon.arrow {
-  background: #fff;
+  background: white;
   transform: translate(1rem, 0);
 }
 .form-container .note button:hover .button-text {
-  color: #fff;
+  color: white;
 }
 
 .img-form {
@@ -670,7 +670,95 @@ footer .cp {
   max-width: 1200px;
   margin: auto;
   margin-bottom: 50px;
-  padding: 15px;
+  padding: 25px;
   border-radius: 7px;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+}
+.help * {
+  box-sizing: border-box;
+}
+.help *::before, .help *::after {
+  box-sizing: border-box;
+}
+.help button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.help button.learn-more {
+  width: 15rem;
+  margin-top: 15px;
+  height: auto;
+}
+.help button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 2px;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 1.625rem;
+}
+.help button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: white;
+}
+.help button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.7rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.help button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid black;
+  border-right: 0.125rem solid black;
+  transform: rotate(45deg);
+}
+.help button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 1.85rem;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.help button:hover .circle {
+  width: 100%;
+}
+.help button:hover .circle .icon.arrow {
+  background: black;
+  transform: translate(1rem, 0);
+}
+.help button:hover .button-text {
+  color: black;
 }/*# sourceMappingURL=form-styling.css.map */
