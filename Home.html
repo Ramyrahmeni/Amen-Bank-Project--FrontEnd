@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>AdminSite</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                  <div class="profile">
+                    <div class="info">
+                      <p>Hey, <b>Bruno</b></p>
+                      <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                      <img src="./ressources/img/The Importance Of Solicitors – Get The Best Solicitors.jpeg" alt="Profile Picture" />
+                    </div>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <aside>
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="#" class="active">
+              <span class="material-icons-sharp"> dashboard </span>
+              <h3>Dashboard</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> person_outline </span>
+              <h3>Customers</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Orders</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Analytics</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> inventory </span>
+              <h3>Products</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Reports</h3>
+            </a>
+          </div>
+    </aside>
+    
+    <!--endSidebarapp-->
+    <script src="js/Home.js"></script>
+</body>

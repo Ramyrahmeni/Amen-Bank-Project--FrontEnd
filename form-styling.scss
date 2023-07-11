@@ -1,4 +1,127 @@
 
+/* DECLARATIONS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ROOT VARIABLES */
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* DARK THEME VARIABLES */
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #565758;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-background);
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-dark);
+}
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+a {
+  color: var(--color-dark);
+}
+img {
+  display: block;
+  width: 100%;
+}
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 0.87rem;
+}
+h4 {
+  font-size: 0.8rem;
+}
+h5 {
+  font-family: 0.77rem;
+}
+small {
+  font-size: 0.75rem;
+}
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.text-muted {
+  color: var(--color-info-dark);
+}
+p {
+  color: var(--color-dark-variant);
+}
+b {
+  color: var(--color-dark);
+}
+.primary {
+  color: var(--color-primary);
+}
+.danger {
+  color: var(--color-danger);
+}
+.success {
+  color: var(--color-success);
+}
+.warning {
+  color: var(--color-warning);
+}
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
@@ -7,7 +130,7 @@ $secondaryColor: #000295;
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--color-background);
   padding: 0px;
   margin: 0px;
   width:100%;
@@ -21,36 +144,172 @@ h2, h3, h4, h5, h6 {
   line-height: 1.2;
   color: inherit;
 }
+
 //Header
 .slogan {
   color: #008738;
   text-align: center;
   font-weight: 500;
   font-size: 33px;
-  margin-bottom: 35px;
+  margin-bottom: 12px;
 }
-
-
+@mixin hdrs(){
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+} 
+.header-container-app{
+  @include hdrs();
+  justify-content: space-between;
+  height: 7rem;
+  .app-logo{
+    margin-left: 20px;
+    width: 14rem;
+  }
+}
 .header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  @include hdrs();
 }
 
 .amenbankLogo{
   width: 480px;
 }
-
-
-//form section
+//rightsection-app-header
+.right {
+    margin-top: 1.4rem;
+    margin-right: 20px;
+    .top {
+      display: flex;
+      justify-content: end;
+      gap: 2rem;
+      font-size: 1.8rem;
+      .logout{
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 7rem;
+        i{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      button {
+        display: none;
+      }
+      .profile {
+        display: flex;
+        gap: 2rem;
+        font-size: 16px;
+        text-align: right;
+        align-items: top;
+        .profile-photo{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .theme-toggler {
+      background: var(--color-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 1.6rem;
+      width: 5rem;
+      cursor: pointer;
+      border-radius: var(--border-radius-1);
+      span {
+        font-size: 1.8rem;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .active {
+          background: var(--color-primary);
+          color: white;
+          border-radius: var(--border-radius-1);
+        }
+      }
+    }
+}
+//sidebar-home
+aside {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+  }
+  .close {
+    display: none;
+  }
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 8rem;
+  width:20rem;
+  h3 {
+    font-weight: 500;
+  }
+  a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+    span {
+      font-size: 1.6rem;
+      transition: all 300ms ease;
+    }
+    .active {
+      background: var(--color-light);
+      color: var(--color-primary);
+      margin-left: 0;
+      &::before{
+        content: "";
+        width: 6px;
+        height: 100%;
+        background: var(--color-primary);
+      }
+      span {
+        color: var(--color-primary);
+        margin-left: calc(1rem - 6px);
+      }
+    }
+    &:hover {
+      color: var(--color-primary);
+      span {
+        margin-left: 1rem;
+      }
+    }
+   
+  }
+  .message-count {
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+  }
+}
+//form-section
 .form-section{
   margin-top: 200px;
 }
@@ -132,10 +391,10 @@ form{
         @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
         position: absolute;
         
-        top: 0;
-        left: 15px;
+        top: -3px;
+        left: 30px;
         right: 0;
-        bottom: 0;
+        bottom: 0px;
         padding: 0.75rem 0;
         margin: 0 0 1.85rem;
         color: $w;
@@ -180,7 +439,7 @@ form{
     input[type='text'],
     input[type='password'] {
       width: 80%;
-      height: 20px;
+      height: 50px;
       padding: 10px;
       font-size: 20px;
       border: 1px solid #ccc;
@@ -191,7 +450,8 @@ form{
     font-weight:700;
   }
   h3{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
   }
   .submit {
     display: flex;
@@ -274,6 +534,9 @@ form{
     padding: 20px;
     color: white;
     text-align: center;
+    p{
+      color:white;
+    }
   }
 }
 
@@ -404,7 +667,8 @@ footer{
       justify-content: space-around;
       align-items:flex-start;
       .actualites{
-        width:300px;
+        width:410px;
+        margin: 0px;
         p{
           margin: 0px;
         }
@@ -570,6 +834,93 @@ footer{
 
 
 @media only screen and (max-width: 768px) {
+  .right {
+    width: 94%;
+    margin: 0 auto 4rem;
+    .top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      align-items: center;
+      padding: 0 0.8rem;
+      height: 4.6rem;
+      background: var(--color-white);
+      width: 100%;
+      margin: 0;
+      z-index: 2;
+      box-shadow: 0 1rem 1rem var(--color-light);
+      button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
+    .logout{
+      position: absolute;
+      left: 37%;
+    }
+    .theme-toggler {
+      width: 4.4rem;
+      position: absolute;
+      left: 66%;
+    }
+    .profile .info {
+      display: none;
+    }
+  }
+  aside {
+    position: fixed;
+    left: -100%;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 1000;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+    .app-logo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .logoamennet{
+        width: 10rem;
+      }
+    }
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+  aside .logo {
+    margin-left: 1rem;
+  }
+  aside .logo h2 {
+    display: inline;
+  }
+  aside .sidebar h3 {
+    display: inline;
+  }
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+  aside .close {
+    display: inline-block;
+    cursor: pointer;
+  }
+
   .help {
     font-size: 20px;
     margin: 150px;
@@ -579,13 +930,11 @@ footer{
     .amenbankLogo{
       width: 200px;
     }
-    .slogan {
-      font-size: 20px;
+    .slogan-container{
+      .slogan {
+        font-size: 20px;
+      }
     }
-  }
-
-  .slogan-container {
-    margin-top: 20px;
   }
 
   .logo-container {
@@ -632,10 +981,14 @@ footer{
     .footer-container {
       flex-direction: column;
       align-items: center;
+      row-gap: 20px;
       padding-bottom: 20px;
     }
+    .actualites{
+      width:410px;
+    }
     .informations,.contact{
-      margin-left: 48px;
+      width: 410px;
     }
   }
 }
@@ -656,7 +1009,7 @@ footer{
     }
     .slogan {
       font-size: 15px;
-      margin-top: 35px;
+      margin-top: 12px;
     }
     .logoamennet{
       width: 70px;
@@ -702,17 +1055,13 @@ footer{
   footer{
     height: auto;
     margin: 0;
-    .actualites{
-      width:100px;
-      margin-right: px;
-    }
     .footer-container {
       flex-direction: column;
       align-items: center;
       padding: 0px;
     }
     .actualites{
-      margin-left: 15px;
+      margin-left: 20px 72px 20px 0px;
     }
     .informations,.contact{
       margin-right: 10px;
