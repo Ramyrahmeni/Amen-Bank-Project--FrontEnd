@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/form-styling.css"> 
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -33,10 +33,6 @@
                     <span class="material-icons-sharp"> dark_mode </span>
                   </div>
                   <div class="profile">
-                    <div class="info">
-                      <p>Hey, <b>Bruno</b></p>
-                      <small class="text-muted">Admin</small>
-                    </div>
                     <div class="profile-photo">
                       <img src="./ressources/img/The Importance Of Solicitors – Get The Best Solicitors.jpeg" alt="Profile Picture" />
                     </div>
@@ -46,6 +42,7 @@
         </div>
         </header>
     <!--Sidebar-->
+    <div style="display: flex;">
     <aside>
         <div class="top">
             <div class="app-logo">
@@ -56,21 +53,21 @@
             </div>
         </div>
         <div class="sidebar">
+          <a href="#">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
             <a href="#" class="active">
-              <span class="material-icons-sharp"> dashboard </span>
-              <h3>Dashboard</h3>
-            </a>
-            <a href="#">
-              <span class="material-icons-sharp"> person_outline </span>
-              <h3>Customers</h3>
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
             </a>
             <a href="#">
               <span class="material-icons-sharp"> receipt_long </span>
-              <h3>Orders</h3>
+              <h3>Telechargement</h3>
             </a>
             <a href="#">
-              <span class="material-icons-sharp"> insights </span>
-              <h3>Analytics</h3>
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
             </a>
             <a href="#">
               <span class="material-icons-sharp"> mail_outline </span>
@@ -78,16 +75,37 @@
               <span class="message-count">26</span>
             </a>
             <a href="#">
-              <span class="material-icons-sharp"> inventory </span>
-              <h3>Products</h3>
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
             </a>
             <a href="#">
               <span class="material-icons-sharp"> report_gmailerrorred </span>
-              <h3>Reports</h3>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+
+              <h3>Gestion de budget</h3>
             </a>
           </div>
     </aside>
     
     <!--endSidebarapp-->
+    <section class="content-section">
+            <h1>Ramy</h1>
+    </section>
+    <section class="options">
+      <h1>Ramy</h1>
+    </section>
+  </div>
     <script src="js/Home.js"></script>
 </body>

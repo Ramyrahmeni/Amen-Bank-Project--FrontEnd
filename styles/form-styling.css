@@ -277,15 +277,12 @@ aside .close {
   flex-direction: column;
   height: 86vh;
   position: relative;
-  top: 8rem;
-  width: 20rem;
-}
-.sidebar h3 {
-  font-weight: 500;
+  top: 5rem;
+  width: 22rem;
 }
 .sidebar a {
   display: flex;
-  color: var(--color-info-dark);
+  color: #00813a;
   margin-left: 2rem;
   gap: 1rem;
   align-items: center;
@@ -293,9 +290,15 @@ aside .close {
   height: 3.7rem;
   transition: all 300ms ease;
 }
+.sidebar a h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0px;
+}
 .sidebar a span {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   transition: all 300ms ease;
+  color: #00813a;
 }
 .sidebar a .active {
   background: var(--color-light);
@@ -313,10 +316,11 @@ aside .close {
   margin-left: calc(1rem - 6px);
 }
 .sidebar a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-variant);
 }
 .sidebar a:hover span {
   margin-left: 1rem;
+  color: var(--color-primary-variant);
 }
 .sidebar .message-count {
   background: var(--color-danger);
@@ -324,6 +328,23 @@ aside .close {
   padding: 2px 10px;
   font-size: 11px;
   border-radius: var(--border-radius-1);
+}
+
+.content-section {
+  width: 53rem;
+  background-color: var(--color-light);
+  margin-top: 10rem;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.options {
+  width: 20rem;
+  background-color: var(--color-light);
+  margin-top: 10rem;
+  border-radius: 1rem;
+  margin-left: 8rem;
+  padding: 3rem;
 }
 
 .form-section {
@@ -857,7 +878,7 @@ footer .cp {
   aside {
     position: fixed;
     left: -100%;
-    background: var(--color-white);
+    background: var(--color-background);
     width: 18rem;
     z-index: 1000;
     box-shadow: 1rem 3rem 4rem var(--color-light);
