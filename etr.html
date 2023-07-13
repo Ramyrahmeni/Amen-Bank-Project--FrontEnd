@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Virement</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <div style="display: flex;">
+    <aside>
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+          <a href="home.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
+            <a href="Virement.html" class="active">
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Telechargement</h3>
+            </a>
+            <a href="mon.html">
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+              <h3>Gestion de budget</h3>
+            </a>
+          </div>
+    </aside>
+    
+    <!--endSidebarapp-->
+    <div class="content-op">
+    <section class="content-section custom" >
+      <div class="title">
+            <h1>Lettre de credit</h1>
+          </div>
+          <form id="form_id">
+          <div class="tbl-content tbl-rech" style="margin-top: 1rem;">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <tr>
+                    <td data-label="Type credit:">
+                        <h2>Type credit:</h2>
+                        <select size="1" class="form-control">
+                          <option>Financier</option>
+                          <option>Commercial</option>
+                        </select>
+                      </td>
+                </tr>
+                <tr>
+                    <td><h2 style="font-weight: 700;">Information Compte:</h2></td>
+                </tr>
+                <tr>
+                    <td data-label="Compte à débiter:">
+                        <h2>Compte principal:(<span style="color: red;">*</span>)</h2>
+                        <select size="1" class="form-control" placeholder="Selectionner un compte">
+                          <option>000110123456</option>
+                          <option>000110123456</option>
+                        </select>
+                      </td>
+                </tr>
+                <tr>
+                    <td data-label="Taux de blocage proposé:">
+                        <h2>Taux de blocage proposé:</h2>
+                        <input type="number" min_value="0">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Compte professionel:">
+                        <h2>Compte professionel:</h2>
+                        <select size="1" class="form-control" placeholder="Selectionner un compte">
+                          <option>000110123456</option>
+                          <option>000110123456</option>
+                        </select>
+                      </td>
+                </tr>
+                <tr>
+                    <td data-label="Taux de blocage proposé:">
+                        <h2>Taux de blocage proposé:</h2>
+                        <input type="number" min_value="0">
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="display: flex; justify-content: center; column-gap: 10px; margin-top: 10px;"><input type="Radio" name="choice"><p> Autorisation banque centrale</p></div>
+                        <div style="display: flex; justify-content: center; column-gap: 10px; margin-top: 10px;"><input type="Radio" name="choice"><p>Fiche information</p></div>
+                   </td>
+                </tr>
+                    <tr>
+                        <td data-label="Taux de blocage proposé:">
+                            <h2>Montant:(<span style="color: red;">*</span>)</h2>
+                            <input type="number" min_value="0" id="montant" oninput="convertToTND(this.value)">
+                       </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Devise">
+                          <h2>Devise:(<span style="color: red;">*</span>)</h2>
+                          <select name="devise1" size="1" class="form-control">
+                            <option value="AED">AED</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="DKK">DKK</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KWD">KWD</option>
+                            <option value="MAD">MAD</option>
+                            <option value="NOK">NOK</option>
+                            <option value="QAR">QAR</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="USD">USD</option>
+                          </select>
+                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Contre valeur en TND:">
+                            <h2>Contre valeur en TND:</h2>
+                            <p id="tndval" style="font-size: 20px;"></p>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Taux de blocage proposé:">
+                            <h2>Montant supplimentaire:</h2>
+                            <input type="number" min_value="0">
+                       </td>
+                    </tr>
+                <tr>
+                    <td><h2 style="font-weight: 700;">Béneficiaire</h2></td>
+                </tr>
+                <tr>
+                    <td data-label="Nom Béneficiaire:">
+                        <h2>Nom Béneficiaire:(<span style="color: red;">*</span>)</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Adresse:">
+                        <h2>Adresse:(<span style="color: red;">*</span>)</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Ville:">
+                        <h2>Ville:(<span style="color: red;">*</span>)</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Code Postal:">
+                        <h2>Code Postal:</h2>
+                        <input type="number" min_value="0">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Pays">
+                        <h2>Pays</h2>
+                        <select name="country" size="1" class="form-control" id="country" style="width:00px">
+                            <option value="Selectionner un Pays">Selectionner un Pays</option>
+                            <option value="Tunisie">Tunisie</option>
+                            <option value="ZA">Afrique du Sud</option>
+                            <option value="AL">Albanie</option>
+                            <option value="DZ">Algérie</option>
+                            <option value="DE">Allemagne</option>
+                            <option value="SA">Arabie Saoudite</option>
+                            <option value="AR">Argentine</option>
+                            <option value="AU">Australie</option>
+                            <option value="AT">Autriche</option>
+                            <option value="BH">Bahreïn</option>
+                            <option value="BE">Belgique</option>
+                            <option value="BY">Biélo-Russie</option>
+                            <option value="BO">Bolivie</option>
+                            <option value="BA">Bosnie-Herzégovine</option>
+                            <option value="BR">Brésil</option>
+                            <option value="BG">Bulgarie</option>
+                            <option value="CA">Canada</option>
+                            <option value="CL">Chili</option>
+                            <option value="CN">Chine</option>
+                            <option value="CY">Chypre</option>
+                            <option value="CO">Colombie</option>
+                            <option value="KR">Corée du Sud</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatie</option>
+                            <option value="DK">Danemark</option>
+                            <option value="EG">Egypte</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="AE">Emirats Arabes Unis</option>
+                            <option value="EC">Equateur</option>
+                            <option value="ES">Espagne</option>
+                            <option value="EE">Estonie</option>
+                            <option value="US">Etats-Unis</option>
+                            <option value="FI">Finlande</option>
+                            <option value="FR">France</option>
+                            <option value="GR">Grèce</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong-Kong</option>
+                            <option value="HU">Hongrie</option>
+                            <option value="IN">Inde</option>
+                            <option value="ID">Indonésie</option>
+                            <option value="IQ">Irak</option>
+                            <option value="IE">Irlande</option>
+                            <option value="IS">Islande</option>
+                            <option value="IL">Israël</option>
+                            <option value="IT">Italie</option>
+                            <option value="JP">Japon</option>
+                            <option value="JO">Jordanie</option>
+                            <option value="KW">Koweit</option>
+                            <option value="LV">Lettonie</option>
+                            <option value="LB">Liban</option>
+                            <option value="LY">Libye</option>
+                            <option value="LT">Lithuanie</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MK">Macédoine</option>
+                            <option value="MY">Malaisie</option>
+                            <option value="MT">Malte</option>
+                            <option value="MA">Maroc</option>
+                            <option value="MX">Mexique</option>
+                            <option value="ME">Monténégro</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NO">Norvège</option>
+                            <option value="NZ">Nouvelle-Zélande</option>
+                            <option value="OM">Oman</option>
+                            <option value="PA">Panama</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="NL">Pays-Bas</option>
+                            <option value="PE">Pérou</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PL">Pologne</option>
+                            <option value="PR">Porto Rico</option>
+                            <option value="PT">Portugal</option>
+                            <option value="QA">Qatar</option>
+                            <option value="DO">République Dominicaine</option>
+                            <option value="CZ">République Tchèque</option>
+                            <option value="RO">Roumanie</option>
+                            <option value="GB">Royaume-Uni</option>
+                            <option value="RU">Russie</option>
+                            <option value="RS">Serbie</option>
+                            <option value="CS">Serbie et Monténégro</option>
+                            <option value="SG">Singapour</option>
+                            <option value="SK">Slovaquie</option>
+                            <option value="SI">Slovénie</option>
+                            <option value="SD">Soudan</option>
+                            <option value="SE">Suède</option>
+                            <option value="CH">Suisse</option>
+                            <option value="SY">Syrie</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TH">Thaïlande</option>
+                            <option value="TN">Tunisie</option>
+                            <option value="TR">Turquie</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="VE">Vénézuela</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="YE">Yémen</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><h2 style="font-weight: 700;">Bancaire Béneficiaire</h2></td>
+                </tr>
+                <tr>
+                    <td data-label="Bank:">
+                        <h2>Banque:</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Adresse Bank:">
+                        <h2>Adresse banque:</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Ville:">
+                        <h2>Ville:</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Code Postal:">
+                        <h2>Code Postal:</h2>
+                        <input type="number" min_value="0">
+                   </td>
+                </tr>
+                <tr>
+                    <td data-label="Pays">
+                        <h2>Pays:(<span style="color: red;">*</span>)</h2>
+                        <select name="country" size="1" class="form-control" id="country" style="width:200px">
+                            <option value="Selectionner un Pays">Selectionner un Pays</option>
+                            <option value="Tunisie">Tunisie</option>
+                            <option value="ZA">Afrique du Sud</option>
+                            <option value="AL">Albanie</option>
+                            <option value="DZ">Algérie</option>
+                            <option value="DE">Allemagne</option>
+                            <option value="SA">Arabie Saoudite</option>
+                            <option value="AR">Argentine</option>
+                            <option value="AU">Australie</option>
+                            <option value="AT">Autriche</option>
+                            <option value="BH">Bahreïn</option>
+                            <option value="BE">Belgique</option>
+                            <option value="BY">Biélo-Russie</option>
+                            <option value="BO">Bolivie</option>
+                            <option value="BA">Bosnie-Herzégovine</option>
+                            <option value="BR">Brésil</option>
+                            <option value="BG">Bulgarie</option>
+                            <option value="CA">Canada</option>
+                            <option value="CL">Chili</option>
+                            <option value="CN">Chine</option>
+                            <option value="CY">Chypre</option>
+                            <option value="CO">Colombie</option>
+                            <option value="KR">Corée du Sud</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatie</option>
+                            <option value="DK">Danemark</option>
+                            <option value="EG">Egypte</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="AE">Emirats Arabes Unis</option>
+                            <option value="EC">Equateur</option>
+                            <option value="ES">Espagne</option>
+                            <option value="EE">Estonie</option>
+                            <option value="US">Etats-Unis</option>
+                            <option value="FI">Finlande</option>
+                            <option value="FR">France</option>
+                            <option value="GR">Grèce</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong-Kong</option>
+                            <option value="HU">Hongrie</option>
+                            <option value="IN">Inde</option>
+                            <option value="ID">Indonésie</option>
+                            <option value="IQ">Irak</option>
+                            <option value="IE">Irlande</option>
+                            <option value="IS">Islande</option>
+                            <option value="IL">Israël</option>
+                            <option value="IT">Italie</option>
+                            <option value="JP">Japon</option>
+                            <option value="JO">Jordanie</option>
+                            <option value="KW">Koweit</option>
+                            <option value="LV">Lettonie</option>
+                            <option value="LB">Liban</option>
+                            <option value="LY">Libye</option>
+                            <option value="LT">Lithuanie</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MK">Macédoine</option>
+                            <option value="MY">Malaisie</option>
+                            <option value="MT">Malte</option>
+                            <option value="MA">Maroc</option>
+                            <option value="MX">Mexique</option>
+                            <option value="ME">Monténégro</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NO">Norvège</option>
+                            <option value="NZ">Nouvelle-Zélande</option>
+                            <option value="OM">Oman</option>
+                            <option value="PA">Panama</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="NL">Pays-Bas</option>
+                            <option value="PE">Pérou</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PL">Pologne</option>
+                            <option value="PR">Porto Rico</option>
+                            <option value="PT">Portugal</option>
+                            <option value="QA">Qatar</option>
+                            <option value="DO">République Dominicaine</option>
+                            <option value="CZ">République Tchèque</option>
+                            <option value="RO">Roumanie</option>
+                            <option value="GB">Royaume-Uni</option>
+                            <option value="RU">Russie</option>
+                            <option value="RS">Serbie</option>
+                            <option value="CS">Serbie et Monténégro</option>
+                            <option value="SG">Singapour</option>
+                            <option value="SK">Slovaquie</option>
+                            <option value="SI">Slovénie</option>
+                            <option value="SD">Soudan</option>
+                            <option value="SE">Suède</option>
+                            <option value="CH">Suisse</option>
+                            <option value="SY">Syrie</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TH">Thaïlande</option>
+                            <option value="TN">Tunisie</option>
+                            <option value="TR">Turquie</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="VE">Vénézuela</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="YE">Yémen</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="BIC SWIFT banque:">
+                        <h2>BIC SWIFT banque:(<span style="color: red;">*</span>)</h2>
+                        <input type="text">
+                   </td>
+                </tr>
+                <tr>
+                    <td><h2 style="font-weight: 700;">Embarquement/Expédition/Destination</h2></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="display: flex; justify-content: flex-start;">
+            <input type="submit" value="Continuer">
+            <button type="reset">Reset</button>
+          </div>
+          </form>
+    </section>
+    <section class="options-virement">
+      <ul>
+        <li class="dropdown">
+          <a>Transfert Emis</a>
+          <ul class="dropdown-menu">
+            <li><a href="etr.html">Ordre de virement</a></li>
+            <li><a href="etrsin.html">Transfert emis a signer</a></li>
+            <li><a href="etrhis.html">Historique des transferts emis</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a>Credit documentaire</a>
+          <ul class="dropdown-menu">
+              <li><a href="etr.html">Ouverture d'une lettre de credit</a></li>
+              <li><a href="etrcrdsin.html">Lettres de credit a signer</a></li>
+              <li><a href="etrcrdhis.html">Historique des lettresde credit</a></li>
+          </ul></li>
+      </ul>
+    </section>
+
+      
+  </div> 
+  </div>
+  <script>
+      function convertToTND(montant) {
+    console.log(montant)
+    var selectedCurrency = document.querySelector('select[name="devise1"]').value;
+    console.log(selectedCurrency);
+    console.log(conversionRates[selectedCurrency])
+    var convertedValue = montant * conversionRates[selectedCurrency];
+    document.getElementById("tndval").textContent = convertedValue + " TND"
+  }
+  </script>
+    <script src="js/Home.js"></script>
+</body>

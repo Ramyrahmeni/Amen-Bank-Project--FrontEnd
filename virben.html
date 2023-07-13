@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Virement</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <div style="display: flex;">
+    <aside>
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+          <a href="home.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
+            <a href="Virement.html" class="active">
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Telechargement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+              <h3>Gestion de budget</h3>
+            </a>
+          </div>
+    </aside>
+    
+    <!--endSidebarapp-->
+    <div class="content-op">
+        <section class="content-section custom" >
+            <div class="title">
+                  <h1>Virement avec benéficiaire</h1>
+                </div>
+                <form id="form_id">
+                <div class="tbl-content tbl-rech" style="margin-top: 1rem;">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                      <tr>
+                          <td data-label="Compte à créditer:">
+                              <h2>Compte à créditer:</h2>
+                              <select size="1" class="form-control">
+                                <option>000110123456</option>
+                                <option>000110123456</option>
+                              </select>
+                            </td>
+                      <tr>
+                          <td data-label="Compte à débiter:">
+                              <h2>Compte à débiter:</h2>
+                              <select size="1" class="form-control">
+                                <option>000110123456</option>
+                                <option>000110123456</option>
+                              </select>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td data-label="Montant:">
+                              <h2>Montant:</h2>
+                              <input type="number" min_value="0">
+                         </td>
+                      </tr>
+                      <tr>
+                          <td data-label="Date d'excecution:">
+                              <h2>Date d'excecution:</h2>
+                              <input type="date" min_value="0">
+                         </td>
+                      </tr>
+                      <tr>
+                          <td>
+                          <h2 style="text-align: center;">Bénéficiaire</h2>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td data-label="Numero de compte:">
+                              <h2>Numero de compte:</h2>
+                              <input type="number" min_value="0">
+                         </td>
+                      </tr>
+                      <tr>
+                          <td data-label="Nom/Raison Sociale:">
+                              <h2>Nom/Raison Sociale:</h2>
+                              <input type="text">
+                         </td>
+                      </tr>
+                      <tr>
+                          <td data-label="Bank:">
+                            <h2>Bank:</h2>
+                          <select name="compteCrediteur" size="1" class="form-control" id="banque">
+                              <option value="01">ATB</option>
+                              <option value="02">BFT</option>
+                              <option value="03">BNA</option>
+                              <option value="07">AMEN BANK</option>
+                              <option value="04">ATTIJARI</option>
+                              <option value="05">BT</option>
+                              <option value="09">BDET</option>
+                              <option value="10">STB</option>
+                              <option value="11">UBCI</option>
+                              <option value="08">BIAT</option>
+                              <option value="00">BCT</option>
+                              <option value="12">UIB</option>
+                              <option value="14">BH</option>
+                              <option value="16">CBNA</option>
+                              <option value="17">CCP</option>
+                              <option value="18">BNDT</option>
+                              <option value="20">BTK</option>
+                              <option value="21">STUSID</option>
+                              <option value="23">TQB</option>
+                              <option value="24">BTE</option>
+                              <option value="26">BTL</option>
+                              <option value="27">BTS</option>
+                              <option value="28">ABC</option>
+                              <option value="31">BCMA</option>
+                              <option value="32">AL BARAKA</option>
+                              <option value="33">NAIB</option>
+                              <option value="35">ALUBAF</option>
+                              <option value="72">UTB</option>
+                              <option value="73">TIB</option>
+                              <option value="74">LINC</option>
+                              <option value="75">CITI BANK</option>
+                              <option value="78">ABC TS</option>
+                              <option value="96">ALUBAF</option>
+                              <option value="99">AUTRES</option>
+                              <option value="25">BZ</option>
+                          </select>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <textarea name="message" placeholder="Motif de paiement" form="form_id"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div style="display: flex; justify-content: flex-start;">
+                  <input type="submit" value="Continuer">
+                  <button type="reset">Reset</button>
+                </div>
+                </form>
+          </section>
+          <section class="options-virement">
+            <ul>
+              <li class="dropdown">
+                <a>Virement de compte à compte</a>
+                <ul class="dropdown-menu">
+                  <li><a href="Virement.html">Nouveau virement</a></li>
+                  <li><a href="virmentsigne.html">Virement à signer</a></li>
+                  <li><a href="virhis.html">Historique des virements</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a>Virement avec benéficiaire</a>
+                <ul class="dropdown-menu">
+                    <li><a href="virben.html">Nouveau virement</a></li>
+                    <li><a href="virbenges.html">Gestion des benéficiaires</a></li>
+                    <li><a href="virbensin.html">Virement à signer</a></li>
+                    <li><a href="virbenhis.html">Historique des virements</a></li>
+                </ul></li>
+              <li class="dropdown">
+                <a>Virement de masse</a>
+                <ul class="dropdown-menu">
+                    <li><a href="virmas.html">Nouveau virement</a></li>
+                    <li><a href="virmassin.html">Virement à signer</a></li>
+                    <li><a href="virmashis.html">Historique des virements</a></li>
+                </ul>
+             </li>
+              <li class="dropdown">
+                <a>Virement permanant</a>
+                <ul class="dropdown-menu">
+                    <li><a href="virper.html">Virement Permanent de compte à compte</a></li>
+                    <li><a href="virperben.html">Virement Permanent avec benéficiaire</a></li>
+                    <li><a href="virperlis.html">Liste des virement permanants</a></li>
+                    <li><a href="virpersin.html">Virement permanant à signer</a></li>
+                </ul>
+            </li>
+              <li><a href="modvir.html">Modèles virements</a></li>
+            </ul>
+          </section>
+      
+      
+  </div> 
+  </div>
+    <script src="js/Home.js"></script>
+</body>
