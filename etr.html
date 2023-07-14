@@ -94,7 +94,7 @@
     </aside>
     
     <!--endSidebarapp-->
-    <div class="content-op">
+    <div class="content-op" style="width: 400px;">
     <section class="content-section custom" >
       <div class="title">
             <h1>Lettre de credit</h1>
@@ -105,7 +105,7 @@
               <tbody>
                 <tr>
                     <td data-label="Type credit:">
-                        <h2>Type credit:</h2>
+                      <h2>Type credit:</h2>
                         <select size="1" class="form-control">
                           <option>Financier</option>
                           <option>Commercial</option>
@@ -113,7 +113,7 @@
                       </td>
                 </tr>
                 <tr>
-                    <td><h2 style="font-weight: 700;">Information Compte:</h2></td>
+                    <td><h3 style="font-weight: 700;font-size: 20px; float:left">Information Compte:</h3></td>
                 </tr>
                 <tr>
                     <td data-label="Compte à débiter:">
@@ -152,7 +152,7 @@
                    </td>
                 </tr>
                     <tr>
-                        <td data-label="Taux de blocage proposé:">
+                        <td data-label="Montant:">
                             <h2>Montant:(<span style="color: red;">*</span>)</h2>
                             <input type="number" min_value="0" id="montant" oninput="convertToTND(this.value)">
                        </td>
@@ -192,7 +192,7 @@
                        </td>
                     </tr>
                 <tr>
-                    <td><h2 style="font-weight: 700;">Béneficiaire</h2></td>
+                    <td><h3 style="font-weight: 700;font-size: 20px; float:left">Béneficiaire:</h3></td>
                 </tr>
                 <tr>
                     <td data-label="Nom Béneficiaire:">
@@ -221,7 +221,7 @@
                 <tr>
                     <td data-label="Pays">
                         <h2>Pays</h2>
-                        <select name="country" size="1" class="form-control" id="country" style="width:00px">
+                        <select name="country" size="1" class="form-control" id="country" style="width:00px" aria-placeholder="Selectionner in pays">
                             <option value="Selectionner un Pays">Selectionner un Pays</option>
                             <option value="Tunisie">Tunisie</option>
                             <option value="ZA">Afrique du Sud</option>
@@ -323,7 +323,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><h2 style="font-weight: 700;">Bancaire Béneficiaire</h2></td>
+                    <td><h3 style="font-weight: 700;font-size: 20px; float:left">Bancaire Béneficiaire</h3></td>
                 </tr>
                 <tr>
                     <td data-label="Bank:">
@@ -454,7 +454,7 @@
                     </td>
                   </tr>
                 <tr>
-                    <td><h2 style="font-weight: 700; display: inline-block;">Embarquement/Expédition/Destination</h2></td>
+                    <td><h3 style="font-weight: 700;font-size: 20px; float:left">Expédition/Destination:</h3></td>
                 </tr>
                 <tr>
                   <td data-label="Lieu expédition/Embarquement:">
@@ -511,23 +511,25 @@
           </td>
         </tr>
         <tr>
-          <td data-label="Mode de livraison:">
-            <h2>Mode de livraison:(<span style="color: red;">*</span>)</h2>
-            <div style="display: flex; justify-content: space-around; margin-top: 15px;">
-            <div style="">
-              <input type="radio" name="val" value="exw" onchange="toggleInput3()"> EXW
+          <td>
+            <h3 style="float: left;">Mode de livraison:(<span style="color: red;">*</span>)</h3>
+            <div style="display: flex; flex-direction: column;margin-top: 20px;">
+            <div style="display: flex; justify-content: center; margin-top: 15px;width: 70px;column-gap: 10px; ">
+            <div style="display: flex; column-gap: 4px; justify-content: center;">
+              <input type="radio" name="val" value="exw" onchange="toggleInput3()"> <p>EXW</p>
             </div>
-            <div style="display: flex; column-gap: 20px; justify-content: center;">
-              <input type="radio" name="val" value="fob" onchange="toggleInput3()"> FOB
+            <div style="display: flex; column-gap: 4px; justify-content: center;">
+              <input type="radio" name="val" value="fob" onchange="toggleInput3()"> <p>FOB</p>
             </div>
-            <div style="display: flex; column-gap: 20px; justify-content: center;">
-              <input type="radio" name="val" value="cfr" onchange="toggleInput3()"> CFR
+            <div style="display: flex; column-gap: 4px; justify-content: center;">
+              <input type="radio" name="val" value="cfr" onchange="toggleInput3()"> <p>CFR</p>
             </div>
-            <div style="display: flex; column-gap: 20px; justify-content: center;">
-              <input type="radio" name="val" value="autres" onchange="toggleInput3()"> Autres
+            <div style="display: flex; column-gap: 4px; justify-content: center;">
+              <input type="radio" name="val" value="autres" onchange="toggleInput3()"> <p>Autres</p>
             </div>
           </div>
-            <input type="text" placeholder="Autres types de livraison" style="width:200px;text-align: center; margin-top: 20px;" id="exp2" disabled>
+          <input type="text" placeholder="Autres types de livraison" style="width:70px;text-align: center; margin-top: 20px;" id="exp2" disabled>
+        </div>
           </td>
           
       </tr>
@@ -562,10 +564,10 @@
             <table cellpadding="0" cellspacing="0" border="0">
               <thead>
                 <tr>
-                  <th>Cocher</th>
-                  <th>Code</th>
-                  <th>Libelle</th>
-                  <th>Nombre de document</th>
+                  <th data-label="Cocher">Cocher</th>
+                  <th data-label="Code">Code</th>
+                  <th data-label="Libelle">Libelle</th>
+                  <th data-label="Nombre de document">Nombre de document</th>
                 </tr>
               </thead>
             </table>
@@ -573,101 +575,101 @@
           <div class="tbl-content">
             <table cellpadding="0" cellspacing="0" border="0">
               <tbody>
-                
                 <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[0]" value="true"></td>
-                  <td>100</td>
-                  <td>FACTURE COMMERCIALE PORTANT CACHET ET SIGNATURE</td>
-                  <td><input type="text" name="docuumentsExiges.description[0]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[1]" value="true"></td>
-                  <td>110</td>
-                  <td>CONNAISSEMENT MARITIME CLEAN ON BOARD</td>
-                  <td><input type="text" name="docuumentsExiges.description[1]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[2]" value="true"></td>
-                  <td>150</td>
-                  <td>CERTIFICAT EUR1</td>
-                  <td><input type="text" name="docuumentsExiges.description[2]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[3]" value="true"></td>
-                  <td>160</td>
-                  <td>NOTE DE POIDS</td>
-                  <td><input type="text" name="docuumentsExiges.description[3]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[4]" value="true"></td>
-                  <td>170</td>
-                  <td>LISTE DE COLISAGE</td>
-                  <td><input type="text" name="docuumentsExiges.description[4]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[5]" value="true"></td>
-                  <td>190</td>
-                  <td>AUTRES A PRECISER</td>
-                  <td><input type="text" name="docuumentsExiges.description[5]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[6]" value="true"></td>
-                  <td>120</td>
-                  <td>LETTRE DE TRANSPORT AERIEN " LTA "</td>
-                  <td><input type="text" name="docuumentsExiges.description[6]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[7]" value="true"></td>
-                  <td>130</td>
-                  <td>LETTRE DE VOITURE " CMR " / " CIM "</td>
-                  <td><input type="text" name="docuumentsExiges.description[7]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[8]" value="true"></td>
-                  <td>180</td>
-                  <td>NOTE DE POIDS/LISTE DE COLISAGE</td>
-                  <td><input type="text" name="docuumentsExiges.description[8]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[9]" value="true"></td>
-                  <td>210</td>
-                  <td>CERTIFICAT D ANALYSE</td>
-                  <td><input type="text" name="docuumentsExiges.description[9]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[10]" value="true"></td>
-                  <td>220</td>
-                  <td>CERTIFICAT PHYTO SANITAIRE</td>
-                  <td><input type="text" name="docuumentsExiges.description[10]" value="" class="form-control"></td>
-              </tr>
-              <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[11]" value="true"></td>
-                  <td>200</td>
-                  <td>CERTIFICAT DE CONFORMITE</td>
-                  <td><input type="text" name="docuumentsExiges.description[11]" value="" class="form-control"></td>
-              </tr>
-              <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
-                  <td><input type="checkbox" name="docuumentsExiges.checked[12]" value="true"></td>
-                  <td>140</td>
-                  <td>CERTIFICAT D'ORIGINE</td>
-                  <td><input type="text" name="docuumentsExiges.description[12]" value="" class="form-control"></td>
-              </tr>
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[0]" value="true"></td>
+                  <td data-label="Code">100</td>
+                  <td data-label="Libelle">FACTURE COMMERCIALE PORTANT CACHET ET SIGNATURE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[0]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[1]" value="true"></td>
+                  <td data-label="Code">110</td>
+                  <td data-label="Libelle">CONNAISSEMENT MARITIME CLEAN ON BOARD</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[1]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[2]" value="true"></td>
+                  <td data-label="Code">150</td>
+                  <td data-label="Libelle">CERTIFICAT EUR1</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[2]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[3]" value="true"></td>
+                  <td data-label="Code">160</td>
+                  <td data-label="Libelle">NOTE DE POIDS</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[3]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[4]" value="true"></td>
+                  <td data-label="Code">170</td>
+                  <td data-label="Libelle">LISTE DE COLISAGE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[4]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[5]" value="true"></td>
+                  <td data-label="Code">190</td>
+                  <td data-label="Libelle">AUTRES A PRECISER</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[5]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[6]" value="true"></td>
+                  <td data-label="Code">120</td>
+                  <td data-label="Libelle">LETTRE DE TRANSPORT AERIEN &quot; LTA &quot;</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[6]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[7]" value="true"></td>
+                  <td data-label="Code">130</td>
+                  <td data-label="Libelle">LETTRE DE VOITURE &quot; CMR &quot; / &quot; CIM &quot;</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[7]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[8]" value="true"></td>
+                  <td data-label="Code">180</td>
+                  <td data-label="Libelle">NOTE DE POIDS/LISTE DE COLISAGE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[8]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[9]" value="true"></td>
+                  <td data-label="Code">210</td>
+                  <td data-label="Libelle">CERTIFICAT D ANALYSE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[9]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[10]" value="true"></td>
+                  <td data-label="Code">220</td>
+                  <td data-label="Libelle">CERTIFICAT PHYTO SANITAIRE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[10]" value="" class="form-control"></td>
+                </tr>
+                <tr class="even" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[11]" value="true"></td>
+                  <td data-label="Code">200</td>
+                  <td data-label="Libelle">CERTIFICAT DE CONFORMITE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[11]" value="" class="form-control"></td>
+                </tr>
+                <tr class="odd" style="color: rgba(0, 0, 0, 0.4); border-radius: 5px; ">
+                  <td data-label="Cocher"><input type="checkbox" name="docuumentsExiges.checked[12]" value="true"></td>
+                  <td data-label="Code">140</td>
+                  <td data-label="Libelle">CERTIFICAT D'ORIGINE</td>
+                  <td data-label="Nombre de document"><input type="text" name="docuumentsExiges.description[12]" value="" class="form-control"></td>
+                </tr>
+                <!-- Add more rows as needed -->
               </tbody>
             </table>
           </div>
         </td>
       </tr>
+      
       <tr>
-        <td data-label="Documents Requis/Autres:">
-          <h2>Documents Requis/Autres:</h2>
-          <textarea form="form_id"></textarea>
+        <td>
+          <textarea form="form_id" placeholder="Documents Requis/Autres:"></textarea>
          </td>
       </tr>
       <tr>
-        <td><div style="display: flex; justify-content: center; column-gap: 10px; margin-top: 10px;"><p>Documents à présenter dans les</p><input type="number"><p> jours de la date d'embarquement/expedition mais dans la validité du credit</p></div></td>
+        <td><p>Documents à présenter dans les </p><input type="number"><p>  jours de la date d'embarquement/expedition mais dans la validité du credit</p></td>
       </tr>
       <tr>
-        <td><h2 style="font-weight: 700;">Reglement</h2></td>
+        <td><h3 style="font-weight: 700;font-size: 20px; float:left">Reglement:</h3></td>
     </tr>
     <tr><td>
       <div style="display: flex;flex-direction: column; row-gap: 20px;">
@@ -690,7 +692,7 @@
             <div style="display: flex; justify-content: flex-start;margin-bottom: 20px;">
               <h3 style="font-weight: 700;">Frais des commissions</h3>
             </div>
-            <h3>Frais des commissions :(<span style="color: red;">*</span>)</h3>
+            <h3 style="width: 180px;">Frais des commissions :(<span style="color: red;">*</span>)</h3>
             <div style="display: flex; flex-direction: column;align-items: center; row-gap: 20px;">
             <select size="1" class="form-control" style="width: 250px;">
               <option>Frais Amen Bank a la charge du Béneficiaire(BEN)</option>
@@ -706,10 +708,10 @@
             <div style="display: flex; justify-content: flex-start;margin-bottom: 20px;">
               <h3 style="font-weight: 700;">Validité (<span style="color: red;">*</span>)</h3>
             </div>
-            <h3>Date Validité :(<span style="color: red;">*</span>)</h3>
+            <h3 style="width: 180px;">Date Validité :(<span style="color: red;">*</span>)</h3>
             <div style="display: flex; flex-direction: column;align-items: center; row-gap: 20px;">
               <input type="date">
-              <textarea form="form_id" placeholder="Commentaire"></textarea>
+              <textarea form="form_id" placeholder="Commentaire" style="width: 220px;"></textarea>
             </div>
       </div>
     </td></tr>

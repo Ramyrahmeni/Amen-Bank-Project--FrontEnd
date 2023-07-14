@@ -51,6 +51,13 @@
 html {
   font-size: 14px;
 }
+canvas {
+  border: 1px solid var(--color-dark);
+  margin-top: 20px;
+}
+.courshead{
+  background-color: var(--color-dark);
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -362,7 +369,6 @@ aside {
   }
   td{
     padding: 15px;
-    width: 8rem;
     text-align: center;
     vertical-align:middle;
     font-weight: 300;
@@ -392,7 +398,7 @@ aside {
       border-radius: 5px;
       background-color: var(--color-light);
       color:var(--color-dark-variant);
-      width: 300px;
+      width: 200px;
       height: 150px;
       padding: 10px;
       font-family: Arial, sans-serif;
@@ -1404,33 +1410,33 @@ footer{
       height:0;
       position: absolute;
     }
+
     tr {
     display: block;
     margin-bottom: .625em;
-    height: 60px;
     }
     td {
     border: 1px solid;
     border-bottom: none;
     display: block;
     font-size: .8em;
-    text-align: right;
+    text-align: center;
     h2{
       display: none;
     }
+    p{
+      font-size: 15px;
+    }
   }
   td::before {
-    content: attr(data-label);
-    float: left;
+    content: attr(data-label);    display: block;
+    text-align: center;
     font-weight: 700;
     font-size: 12px;
     margin-top: 10px;
     color: var(--color-dark-variant);
     text-transform: uppercase;
-  }
-  textarea{
-    margin-right: 25px;
-    width:240px;
+    margin-bottom: 20px;
   }
 
 

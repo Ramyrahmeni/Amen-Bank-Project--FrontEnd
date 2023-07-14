@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Virement</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <div style="display: flex;">
+    <aside>
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+          <a href="home.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
+            <a href="Virement.html" class="active">
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Telechargement</h3>
+            </a>
+            <a href="mon.html">
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+              <h3>Gestion de budget</h3>
+            </a>
+          </div>
+    </aside>
+    
+    <!--endSidebarapp-->
+    <div class="content-op">
+        <section class="content-section custom" >
+            <h1>Liste des transferts émis à signer</h1>
+            <div style="display: flex; margin: 15px;padding: 10px;font-size: 20px;">
+                Votre liste des transferts émis à signer est vide.
+            </div>
+        </section>
+    <section class="options-virement">
+      <ul>
+        <li class="dropdown">
+          <a>Transfert Emis</a>
+          <ul class="dropdown-menu">
+            <li><a href="etr.html">Ordre de virement</a></li>
+            <li><a href="etrsin.html">Transfert emis a signer</a></li>
+            <li><a href="etrhis.html">Historique des transferts emis</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a>Credit documentaire</a>
+          <ul class="dropdown-menu">
+              <li><a href="etr.html">Ouverture d'une lettre de credit</a></li>
+              <li><a href="etrcrdsin.html">Lettres de credit a signer</a></li>
+              <li><a href="etrcrdhis.html">Historique des lettresde credit</a></li>
+          </ul></li>
+      </ul>
+    </section>
+
+      
+  </div> 
+  </div>
+  <script>
+      function convertToTND(montant) {
+    console.log(montant)
+    var selectedCurrency = document.querySelector('select[name="devise1"]').value;
+    console.log(selectedCurrency);
+    console.log(conversionRates[selectedCurrency])
+    var convertedValue = montant * conversionRates[selectedCurrency];
+    document.getElementById("tndval").textContent = convertedValue + " TND"
+  }
+
+  function f(s,e) {
+
+  if (s === "Autorisee"||s==="Oui") {
+    e.disabled = false;
+  } else {
+    e = true;
+  }
+
+}
+function toggleInput(){
+  var selectedValue = document.getElementById("autorisation").value;
+  var expInput = document.getElementById("exp");
+  f(selectedValue,expInput)
+}
+function toggleInput1(){
+  var selectedValue1 = document.getElementById("autorisation1").value;
+  var expInput1 = document.getElementById("exp1");
+  f(selectedValue1,expInput1)
+}
+function toggleInput3() {
+  var radios = document.getElementsByName("val");
+  var expInput = document.getElementById("exp2");
+
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked && radios[i].value === "autres") {
+      expInput.disabled = false;
+    } else {
+      expInput.disabled = true;
+    }
+  }
+}
+function toggleInput4() {
+  var radios = document.getElementsByName("val2");
+  var exp3jInput = document.getElementById("exp3j");
+  var exp3dInput = document.getElementById("exp3d");
+  var exp4jInput = document.getElementById("exp4j");
+  var exp4dInput = document.getElementById("exp4d");
+  var exp5Input = document.getElementById("exp5");
+  var exp6Input = document.getElementById("exp6");
+
+  if (radios[1].checked) {
+    exp3jInput.disabled = false;
+    exp3dInput.disabled = false;
+  } else {
+    exp3jInput.disabled = true;
+    exp3dInput.disabled = true;
+  }
+
+  if (radios[2].checked) {
+    exp4jInput.disabled = false;
+    exp4dInput.disabled = false;
+  } else {
+    exp4jInput.disabled = true;
+    exp4dInput.disabled = true;
+  }
+
+  if (radios[3].checked) {
+    exp5Input.disabled = false;
+  } else {
+    exp5Input.disabled = true;
+  }
+
+  if (radios[4].checked) {
+    exp6Input.disabled = false;
+  } else {
+    exp6Input.disabled = true;
+  }
+}
+
+
+
+
+
+  </script>
+    <script src="js/Home.js"></script>
+</body>

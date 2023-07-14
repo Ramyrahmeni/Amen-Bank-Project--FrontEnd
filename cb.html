@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>AdminSite</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <div style="display: flex;">
+    <aside>
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+          <a href="home.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
+            <a href="Virement.html" class="active">
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
+            </a>
+            <a href="">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Telechargement</h3>
+            </a>
+            <a href="mon.html">
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="etr.html">
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="cb.html">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+              <h3>Gestion de budget</h3>
+            </a>
+          </div>
+    </aside>
+    
+    <!--endSidebarapp-->
+    <div class="content-op">
+    <section class="content-section">
+        <h2>Cours de SICAV</h2>
+
+        <table style="  margin-top: 20px;">
+          <thead class="courshead">
+            <tr>
+              <th>Type SICAV</th>
+              <th>Date SICAV</th>
+              <th>Valeur SICAV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SICAV AMEN</td>
+              <td>09/09/2016</td>
+              <td>39,711</td>
+            </tr>
+            <tr>
+              <td>TUNISIE SICAV</td>
+              <td>09/09/2016</td>
+              <td>162,498</td>
+            </tr>
+            <tr>
+              <td>SICAV ENTREPRISE</td>
+              <td>09/09/2016</td>
+              <td>103,993</td>
+            </tr>
+            <tr>
+              <td>FIDELITY OBLIG SICAV</td>
+              <td>09/09/2016</td>
+              <td>103,960</td>
+            </tr>
+            <tr>
+              <td>AMEN PREMIERE</td>
+              <td>09/09/2016</td>
+              <td>102,415</td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <canvas id="stockChart" width="400" height="300"></canvas>
+    </section>
+    <section class="options-virement">
+        <ul>
+          <li class="dropdown">
+            <a>Change</a>
+            <ul class="dropdown-menu">
+              <li><a href="cd.html">Cours des devises</a></li>
+              <li><a href="cbam.html">Analyse de marche</a></li>            </ul>
+          </li>
+          <li class="dropdown">
+            <a>Bourse</a>
+            <ul class="dropdown-menu">
+                <li><a href="cs.html">Cours des SICAV</a></li>
+                <li><a href="cb.html">Cours de bourse</a></li>          
+              </ul></li>
+        </ul>
+      </section>
+      <script>
+        // Stock data for the curve
+        const stockData = [
+          { etr: "SICAV AMEN", price: 39711 },
+          { etr: "TUNISIE SICAV", price: 162498 },
+          { etr: "SICAV ENTREPRISE", price: 103993 },
+          { etr: "FIDELITY OBLIG SICAV", price: 103960 },
+          { etr: "AMEN PREMIERE", price: 102415 },
+        ];
+      
+        // Get the canvas element
+        const canvas = document.getElementById("stockChart");
+      
+        // Prepare data for Chart.js
+        const labels = stockData.map((data) => data.etr);
+        const prices = stockData.map((data) => data.price);
+      
+        // Create the chart
+        new Chart(canvas, {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: "Valeur SICAV",
+                data: prices,
+                borderColor: "blue",
+                fill: false,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              x: {
+                type: "category", // Treat labels as categorical values
+                display: true,
+                title: {
+                  display: true,
+                  text: "Date SICAV",
+                },
+              },
+              y: {
+                display: true,
+                title: {
+                  display: true,
+                  text: "Valeur SICAV",
+                },
+              },
+            },
+          },
+        });
+      </script>
+      
+    <script src="js/Home.js"></script>
+</body>
