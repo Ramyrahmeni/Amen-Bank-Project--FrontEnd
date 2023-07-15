@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/form-styling.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>@Amennet Online Banking</title>
+        <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+
+    <header>
+        <div class="header-container-app">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
+                    </button>
+                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-shield-alt"></i>
+                    </div> 
+                  <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                  </div>
+                </div>
+
+        </div>
+        </header>
+    <!--Sidebar-->
+    <div style="display: flex;">
+    <aside style="margin-top: 40px;">
+        <div class="top">
+            <div class="app-logo">
+                <img src="ressources/img/amennet.png" class="logoamennet">
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
+        </div>
+        <div class="sidebar">
+          <a href="home.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Compte</h3>
+          </a>
+            <a href="Virement.html" class="active">
+              <span class="material-icons-sharp">account_balance</span>
+              <h3>Virement</h3>
+            </a>
+            <a href="">
+              <span class="material-icons-sharp"> receipt_long </span>
+              <h3>Telechargement</h3>
+            </a>
+            <a href="mon.html">
+              <span class="material-icons-sharp"> money </span>
+              <h3>Monétique</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> mail_outline </span>
+              <h3>Messages</h3>
+              <span class="message-count">26</span>
+            </a>
+            <a href="etr.html">
+              <span class="material-icons-sharp"> flight </span>
+              <h3>Bancaire Etranger</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp"> report_gmailerrorred </span>
+              <h3>Services</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp financement-icon">monetization_on</span>
+
+              <h3>Financement</h3>
+            </a>
+            <a href="cb.html">
+              <span class="material-icons-sharp"> insights </span>
+              <h3>Change/Bourse</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp budget-icon">account_balance_wallet</span>
+              <h3>Gestion de budget</h3>
+            </a>
+          </div>
+        </aside>
+    <!--endSidebarapp-->
+    <div class="content-op" style="margin-top: 60px;">
+        <section class="content-section custom" >
+            <h1>Image des chèques
+            </h1>
+            <div style="display: flex; margin: 15px;padding: 10px;font-size: 20px;">
+                Vous n'avez aucun document à télécharger.
+            </div>
+        </section>
+  
+    </section>
+    <section class="options-virement">
+      <ul>
+        <li class="dropdown">
+          <a>Swift</a>
+          <ul class="dropdown-menu">
+            <li><a href="tele.html">OuvertureLC</a></li>
+            <li><a href="telete.html">Transfert emis - TRE</a></li>
+            <li><a href="teletr.html">Transfert recus -TRR</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a>Avis d'opération</a>
+          <ul class="dropdown-menu">
+              <li><a href="teleaop.html">Avis d'opération(PDF)</a></li>
+              <li><a href="teleaot.html">Avis d'opération(text)</a></li>
+          </ul></li>
+          <li class="dropdown">
+            <a>Situation des effets</a>
+            <ul class="dropdown-menu">
+                <li><a href="telees.html">Etat des sorts des effets</a></li>
+                <li><a href="telecro.html">CRO effet structuré</a></li>
+            </ul></li>
+            <li class="dropdown">
+                <a>Relevé de compte</a>
+                <ul class="dropdown-menu">
+                    <li><a href="telercp.html">Relevé de compte(PDF)</a></li>
+                    <li><a href="telerct.html">Relevé de compte(text)</a></li>
+                    <li><a href="telercc.html">Relevé de compte(CFONB)</a></li>
+
+                </ul></li>
+                <li class="dropdown">
+                    <a>Echelle d'intérêts</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="teleeip.html">Echelle d'intérêts(PDF)</a></li>
+                        <li><a href="teleeit.html">Echelle d'intérêts(text)</a></li>    
+                    </ul></li>
+                    <li>
+                        <a href="teleic.html">Image des chèques </a>
+                    </li>
+                    <li>
+                        <a href="teleil.html">Image des lettres de change
+                        </a>
+                    </li>
+                    <li>
+                        <a href="telescard.html">Situation des cartes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="telescred.html">Situation des crédits
+                        </a>
+                    </li>
+                    <li>
+                        <a href="telesplac.html">Situation des placements
+                        </a>
+                    </li>
+                    <li>
+                        <a href="telesorcheq.html">Sort des chèques versés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teletrantpe.html">Transactions TPE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teled.html">Divers
+                        </a>
+                    </li>
+      </ul>
+    </section>
+    <script src="js/Home.js"></script>
+</body>
