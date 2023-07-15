@@ -387,7 +387,7 @@ aside {
     input{
       border-radius: 5px;
       background-color: var(--color-light);
-      &[type="number"],&[type="date"],&[type="text"] {
+      &[type="number"],&[type="date"],&[type="text"],&[type="file"] {
         height: 37px;
         width:8rem;
         padding: 10px;

@@ -408,7 +408,7 @@ aside .close {
   border-radius: 5px;
   background-color: var(--color-light);
 }
-.content-section td input[type=number], .content-section td input[type=date], .content-section td input[type=text] {
+.content-section td input[type=number], .content-section td input[type=date], .content-section td input[type=text], .content-section td input[type=file] {
   height: 37px;
   width: 8rem;
   padding: 10px;
