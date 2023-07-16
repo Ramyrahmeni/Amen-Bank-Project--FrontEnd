@@ -321,9 +321,23 @@ aside {
 .content-section{
   width:53rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 2rem 2.5rem 2rem 2.5rem;
+  .np{
+    background-color: transparent;
+    color: $primaryColor;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border: 1px solid $primaryColor;
+    border-radius: 3px;
+    &:hover {
+      background-color: $primaryColor;
+      color: var(--color-info-light);
+      cursor: pointer;
+    }
+  }
   input[type="submit"],button[type="reset"] {
       background-color: transparent;
       color: $primaryColor;
@@ -462,7 +476,7 @@ aside {
 .options{
   width:28rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 3rem;
   color:var(--color-dark);
@@ -520,7 +534,7 @@ aside {
 .options-virement{
   width:28rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 3rem;
   color:var(--color-dark);
@@ -1413,7 +1427,6 @@ footer{
 
     tr {
     display: block;
-    margin-bottom: .625em;
     }
     td {
     border: 1px solid;

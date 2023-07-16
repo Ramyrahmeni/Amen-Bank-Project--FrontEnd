@@ -536,13 +536,13 @@
       <tr>
         <td>
           <h2>Période embarquement</h2>
-          <textarea></textarea>
+          <textarea placeholder="Période embarquement"></textarea>
         </td>
       </tr>
       <tr>
         <td>
           <h2>Nature biens/services:(<span style="color: red;">*</span>)</h2>
-          <textarea></textarea>
+          <textarea placeholder="Période embarquement"></textarea>
         </td>
       </tr>
       <tr>
@@ -551,10 +551,10 @@
       <tr>
         <td>
           <div style="display: flex; justify-content: center; column-gap: 55px;" ><input type="radio" name="val2"><p>Paiement a vue</p></div>
-          <div style="display: flex; justify-content: space-around; align-items: center;margin-top: 15px;"> <input type="radio" name="val2" value="paiementdiff" onchange="toggleInput4()"><p>Paiement differe</p><p>à</p><input type="number" disabled id="exp3j"><p>jour</p><p>date</p><input type="date" disabled id="exp3d"></div>
-          <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 15px;" > <input type="radio" name="val2" value="paiementaccept"onchange="toggleInput4()"><p>Acceptation d'une traite</p><p>à</p><input type="number" disabled id="exp4j"><p>jour</p><input type="date"disabled id="exp4d"></div>
-          <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 15px;" > <input type="radio" name="val2" value="nego" onchange="toggleInput4()"><p>Négociation</p><textarea form="form_id" disabled id="exp5"></textarea></div>
-          <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 15px;" > <input type="radio" name="val2" value="paiementmix" onchange="toggleInput4()"><p>Paiement Mixte</p><textarea form="form_id" disabled id="exp6"></textarea></div>
+          <div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"> <input type="radio" name="val2" value="paiementdiff" onchange="toggleInput4()"><p>Paiement differe</p><p>à</p></div><div style="display: flex; align-items: center;margin-top: 15px;column-gap: 20px;justify-content: center;"><input type="number" disabled id="exp3j"><p>jour </p></div><div style="display: flex; justify-content:center; align-items: center;margin-top: 15px;column-gap: 20px;"><br><p>date</p><input type="date" disabled id="exp3d"></div>
+          <div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"><input type="radio" name="val2" value="paiementaccept"onchange="toggleInput4()"><p>Acceptation d'une traite</p><p>à</p></div><div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"><input type="number" disabled id="exp4j"><p>jour </p></div><div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"><p>date</p><input type="date"disabled id="exp4d"></div>
+          <div style="display: flex;flex-direction: column; justify-content: center; align-items: center;margin-top: 15px;row-gap: 20px;"><div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"> <input type="radio" name="val2" value="nego" onchange="toggleInput4()"><p>Négociation</p></div><textarea form="form_id" disabled id="exp5"></textarea></div>
+          <div style="display: flex;flex-direction: column; justify-content: center; align-items: center;margin-top: 15px;row-gap: 20px;"><div style="display: flex; justify-content: center; align-items: center;margin-top: 15px;column-gap: 20px;"><input type="radio" name="val2" value="paiementmix" onchange="toggleInput4()"><p>Paiement Mixte</p></div><textarea form="form_id" disabled id="exp6"></textarea></div>
         </td>
       </tr>
       <tr><td>Documents exigés (<span style="color: red;">*</span>)</td></tr>
@@ -666,7 +666,7 @@
          </td>
       </tr>
       <tr>
-        <td><p>Documents à présenter dans les </p><input type="number"><p>  jours de la date d'embarquement/expedition mais dans la validité du credit</p></td>
+        <td><p>Documents à présenter dans les </p><input type="number"><p>  jours de la date<br> d'embarquement/expedition mais dans<br> la validité du credit</p></td>
       </tr>
       <tr>
         <td><h3 style="font-weight: 700;font-size: 20px; float:left">Reglement:</h3></td>

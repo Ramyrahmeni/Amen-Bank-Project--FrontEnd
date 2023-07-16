@@ -338,11 +338,25 @@ aside .close {
 .content-section {
   width: 53rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 2rem 2.5rem 2rem 2.5rem;
   /* demo styles */
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+}
+.content-section .np {
+  background-color: transparent;
+  color: #00813a;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+  border: 1px solid #00813a;
+  border-radius: 3px;
+}
+.content-section .np:hover {
+  background-color: #00813a;
+  color: var(--color-info-light);
+  cursor: pointer;
 }
 .content-section input[type=submit], .content-section button[type=reset] {
   background-color: transparent;
@@ -470,7 +484,7 @@ aside .close {
 .options {
   width: 28rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 3rem;
   color: var(--color-dark);
@@ -520,7 +534,7 @@ aside .close {
 .options-virement {
   width: 28rem;
   background-color: var(--color-light);
-  margin-top: 10rem;
+  margin-top: 130px;
   border-radius: 1rem;
   padding: 3rem;
   color: var(--color-dark);
@@ -1340,7 +1354,6 @@ footer .cp {
   }
   .content-section tr {
     display: block;
-    margin-bottom: 0.625em;
   }
   .content-section td {
     border: 1px solid;
