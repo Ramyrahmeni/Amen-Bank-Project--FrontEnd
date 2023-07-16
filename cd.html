@@ -381,7 +381,11 @@ new Chart(canvas, {
         title: {
           display: true,
           text: "Currency Code"
-        }
+        },
+        ticks: {
+        maxRotation: 90, // Increase the rotation angle
+        minRotation: 90
+      }
       },
       y: {
         title: {

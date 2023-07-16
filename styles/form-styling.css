@@ -1354,7 +1354,7 @@ footer .cp {
     margin: 0rem;
   }
   .content-section thead {
-    visibility: hidden;
+    display: none;
     height: 0;
     position: absolute;
   }

@@ -584,7 +584,13 @@
             title: {
               display: true,
               text: "Stock Code"
-            }
+            },
+            ticks: {
+        maxRotation: 90, // Increase the rotation angle
+        minRotation: 90,
+        autoSkip: false, // Disable automatic skipping of ticks
+          maxTicksLimit: 20 // Set a maximum number of ticks to display
+      }
           },
           y: {
             title: {
@@ -594,7 +600,8 @@
             suggestedMin: Math.min(...openValues, ...closeValues) - 1, // Set the minimum value slightly lower than the minimum value
             suggestedMax: Math.max(...openValues, ...closeValues) + 1, // Set the maximum value slightly higher than the maximum value
             beginAtZero: true
-          }
+          },
+          
         }
       }
     });
