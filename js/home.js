@@ -1,36 +1,51 @@
+// Theme Toggler
 const themeToggler = document.querySelector(".theme-toggler");
 themeToggler.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme-variables");
+  document.body.classList.toggle("dark-theme-variables");
   
-    themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
-    themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
-  });
-  //sidebar
+  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+  
+  // Store the theme preference in Local Storage
+  const isDarkTheme = document.body.classList.contains("dark-theme-variables");
+  localStorage.setItem("themePreference", isDarkTheme ? "dark" : "light");
+});
+
+// Check for stored theme preference on page load
+const storedThemePreference = localStorage.getItem("themePreference");
+if (storedThemePreference === "dark") {
+  document.body.classList.add("dark-theme-variables");
+  themeToggler.querySelector("span:nth-child(1)").classList.add("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.remove("active");
+}
+
+// Sidebar
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 
 // Show Sidebar
 menuBtn.addEventListener("click", () => {
-    sideMenu.style.display = "block";
-  });
-  
-  // Hide Sidebar
-  closeBtn.addEventListener("click", () => {
-    sideMenu.style.display = "none";
-  });
-  window.addEventListener("resize",()=>{
-    if(window.innerWidth>768){
-        if(sideMenu.style.display=="none"){
-            sideMenu.style.display="block"
-        }
+  sideMenu.style.display = "block";
+});
+
+// Hide Sidebar
+closeBtn.addEventListener("click", () => {
+  sideMenu.style.display = "none";
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    if (sideMenu.style.display == "none") {
+      sideMenu.style.display = "block";
     }
-    else{
-        if(sideMenu.style.display=="block"){
-            sideMenu.style.display="none"
-        }
+  } else {
+    if (sideMenu.style.display == "block") {
+      sideMenu.style.display = "none";
     }
-  })
+  }
+});
+
   //devise convertisseur
 // Hardcoded conversion rates
 // Hardcoded conversion rates

@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/form-styling.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>@Amennet Online Banking</title>
+    <title>AdminSite</title>
         <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-
 </head>
 <body>
-
     <header>
         <div class="header-container-app">
             <div class="app-logo">
@@ -28,9 +24,9 @@
                     <button id="menu-btn">
                         <span class="material-icons-sharp" style="font-size: 2rem;"> menu </span>
                     </button>
-                    <div class="logout"><i class="fas fa-sign-out-alt"></i>
-                        <i class="fas fa-cog"></i>
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="logout"><a href="form.html"><i class="fas fa-sign-out-alt"></i></a>
+                        <a href="set.html"><i class="fas fa-cog"></i></a>
+                        <a href="security.html"><i class="fas fa-shield-alt"></i></a>
                     </div> 
                   <div class="theme-toggler">
                     <span class="material-icons-sharp active"> light_mode </span>
@@ -42,7 +38,7 @@
         </header>
     <!--Sidebar-->
     <div style="display: flex;">
-    <aside>
+      <aside>
         <div class="top">
             <div class="app-logo">
                 <img src="ressources/img/amennet.png" class="logoamennet">
@@ -60,7 +56,7 @@
               <span class="material-icons-sharp">account_balance</span>
               <h3>Virement</h3>
             </a>
-            <a href="">
+            <a href="tele.html">
               <span class="material-icons-sharp"> receipt_long </span>
               <h3>Telechargement</h3>
             </a>
@@ -96,81 +92,61 @@
             </a>
           </div>
         </aside>
+    
     <!--endSidebarapp-->
     <div class="content-op">
         <section class="content-section">
-            <h1>Simulation credit</h1>
+            <h1>Préférences compte</h1>
             <form id="form_id">
                 <div class="tbl-content" style="margin-top: 20px;">
                   <table cellpadding="0" cellspacing="0" border="0">
                     <tbody>
-                      <tr>
-                        <td data-label="Nature du crédit:">
-                          <h2>Nature du crédit:</h2>
-                          <select class="form-control" style="width: 200px;">
-                            <option>AUTOINVEST</option>
-                            <option>CREDIM</option>
-                            <option>PRESALAIRE</option>
-                        </select>
-                        </td>
+                        <form id="subform">
+                        <tr> 
+                            <td data-label="N° de compte">                   
+                            <h2>N° de compte:</h2>
+                            <select size="1" class="form-control">
+                                <option>000110123456</option>
+                                <option>000110123456</option>
+                              </select>
+                            </td>
+                          </tr>
                       </tr>
                       <tr>
-                        <td data-label="Montant du crédit:">
-                          <h2>Montant du crédit:</h2>
-                          <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                            <input type="Number" id="mc">
-                            <p>Dinars</p>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Durée de remboursement:">
-                          <h2>Durée de remboursement:</h2>
-                          <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                          <input type="Number" id="db">
-                          <p>ans</p>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Revenu mensuel Brut:">
-                          <h2>Revenu mensuel Brut:</h2>
-                          <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                            <input type="Number" id="rm">
-                            <p>Dinars</p>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Vous paierez par mois:">
-                          <h2>Vous paierez par mois:</h2>
-                          <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                            <p id="montantparmois"></p>
-                            <p>Dinars</p>
-                          </div>
-                        </td>
-                      </tr>
-                    <tr>
                         <td>
-                          <h3 style="font-weight: 700;">Calcul de votre capacité d'emprunter<br> (40% de votre salaire brut) </h3>
-                      </td>
+                            <input type="submit" value="Afficher">
+                          </td>
+                      </tr>
+                        </form>
+                    <tr>
+                        <td data-label="N° de compte:">
+                          <h2>N° de compte:</h2>
+                          <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
+                            <p>000110123456</p>
+                          </div>
+                        </td>
+                      </tr>
                     </tr>
                     <tr>
-                        <td data-label="Montant maximum du crédit:">
-                          <h2>Montant maximum du crédit:</h2>
+                        <td data-label="Titulaire:">
+                          <h2>Titulaire:</h2>
                           <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                            <p id="montantmax"></p>
-                            <p>Dinars</p>
+                            <p>Compte Demo 1</p>
                           </div>
                         </td>
                       </tr>
                       <tr>
-                        <td data-label="Mensualité:">
-                          <h2>Mensualité:</h2>
+                        <td data-label="Agence:">
+                          <h2>Agence:</h2>
                           <div style="display: flex; justify-content: center;column-gap: 20px;align-items: center;">
-                            <p id="mensualite"></p>
-                            <p>Dinars</p>
+                            <p>Agence de France</p>
                           </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Libellé compte:">
+                          <h2>Libellé compte:</h2>
+                          <input type="text">
                         </td>
                       </tr>
                     
@@ -178,47 +154,28 @@
                   </table>
                 </div>
                 <div style="display: flex; justify-content: flex-start;">
-                  <input type="submit" value="Simuler">
-                  <button type="reset">Reinitialiser</button>
+                  <input type="submit" value="Sauvegarder">
+                </div>
                 </form>
       </section>
     <section class="options-virement">
-      <ul>
-            <li><a href="fin.html">Demande de credit</a></li>
-            <li><a href="finsc.html">Simulation credit</a></li>
+        <ul>
+            <li><a href="set.html">Profil d'utilisateur</a></li> 
+            <li class="dropdown"><a>Préférences compte</a>
+                <ul class="dropdown-menu">
+                    <li><a href="setprfr.html">Compte par défaut</a></li>
+                    <li><a href="setprfrlib.html">Libelle Compte</a></li>
+                    <li><a href="setprfrmail.html">Alerte Mail</a></li>
+                    <li><a href="setprfrsms.html">Alerte SMS</a></li>
+                    <li><a href="setprfrcompteur.html">Compteur de connexions</a></li>
+                </ul>
+                </li>
+            <li><a href="setmail.html">Paramètres mailbox</a></li>
+            <li><a href="setinf.html">Informations sur le compte</a></li>        
+            <li><a href="security.html">Mise à jour Mot de Passe</a></li>
+        </ul>   
     </section>
+  </div> 
+  </div>
     <script src="js/Home.js"></script>
-    <script>
-        // Sélection des éléments du formulaire
-        form=document.getElementById('form_id')
-const montantCreditInput = document.getElementById('mc');
-const dureeRemboursementInput = document.getElementById('db');
-const revenuMensuelInput = document.getElementById('rm');
-const montantparmois = document.getElementById('montantparmois');
-const montantMaxOutput = document.getElementById('montantmax');
-const mensualiteOutput = document.getElementById('mensualite');
-console.log(form)
-// Écouteur d'événement pour la soumission du formulaire
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Empêche le rechargement de la page
-
-  // Récupération des valeurs saisies dans le formulaire
-  const montantCredit = parseFloat(montantCreditInput.value);
-  const dureeRemboursement = parseInt(dureeRemboursementInput.value);
-  const revenuMensuel = parseFloat(revenuMensuelInput.value);
-
-  // Calcul de la mensualité
-  const dureeRemboursementMois = dureeRemboursement * 12;
-  const mensualite = montantCredit / dureeRemboursementMois;
-  // Calcul du montant maximum du crédit (40% du revenu mensuel)
-  const montantMaximumCredit = revenuMensuel * 0.4;
-
-  // Affichage des résultats
-  console.log(montantMaximumCredit)
-  montantMaxOutput.textContent = montantMaximumCredit.toFixed(2);
-  mensualiteOutput.textContent = montantMaximumCredit.toFixed(2);
-  montantparmois.textContent = mensualite.toFixed(2);
-});
-
-    </script>
 </body>
