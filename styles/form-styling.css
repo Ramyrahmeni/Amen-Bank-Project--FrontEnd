@@ -618,7 +618,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 900px;
+  width: 500px;
   height: 600px;
   padding: 20px;
   border-radius: 5px;
@@ -947,7 +947,6 @@ footer .footer-container {
 }
 footer .footer-container .actualites {
   width: 410px;
-  margin: 0px;
   color: white;
   font-size: 20px;
 }
@@ -1338,7 +1337,7 @@ footer .cp {
     padding: 0px;
   }
   footer .actualites {
-    margin-left: 20px 72px 20px 0px;
+    margin-top: 20px;
   }
   footer .informations, footer .contact {
     margin-right: 10px;

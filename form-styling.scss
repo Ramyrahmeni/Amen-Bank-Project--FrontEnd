@@ -738,7 +738,7 @@ form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 900px;
+  width: 500px;
   height: 600px; 
   padding: 20px;
   border-radius: 5px;
@@ -981,7 +981,6 @@ footer{
       align-items:flex-start;
       .actualites{
         width:410px;
-        margin: 0px;
         p{
           margin: 0px;
         }
@@ -1410,7 +1409,7 @@ footer{
       padding: 0px;
     }
     .actualites{
-      margin-left: 20px 72px 20px 0px;
+      margin-top: 20px;
     }
     .informations,.contact{
       margin-right: 10px;
